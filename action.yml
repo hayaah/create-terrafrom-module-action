@@ -1,0 +1,24 @@
+name: 'create terraftom module'
+description: 'used to create a terrafrom module in an organization'
+inputs:
+  token:  
+    description: 'terraform user token user'
+    required: true
+  module_name:  
+    description: 'the name of the terraform module the user wishes to create'
+    required: true 
+  provider:  
+    description: 'the podule used provider'
+    required: true 
+  registry_name:   
+    description: 'private | public registry'
+    required: true 
+  organizations:
+    description: 'organizations to create the module in'
+    required: true 
+outputs:
+  response: 
+    description: 'request response'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
