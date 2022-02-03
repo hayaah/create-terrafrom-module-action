@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: output 1
         id: hello
-        uses: hayaah/hello-world-javascript-action@v1
+        uses: hayaah/create-terrafrom-module-action@v1
         with:
           moduleName: 'moduleName'
           token: 'token'
