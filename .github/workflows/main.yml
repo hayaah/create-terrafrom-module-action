@@ -5,11 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - name: Hello world action step
+      - name: output 1
         id: hello
         uses: hayaah/hello-world-javascript-action@v1
         with:
-          who-to-greet: 'Mona the Octocat'
+          moduleName: 'moduleName'
+          token: 'token'
+          provider: 'provider'
+          registryName: 'registryName'
+          organizations: 'organizations'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.res }}"
