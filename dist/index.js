@@ -8717,11 +8717,11 @@ var core = __nccwpck_require__(24);
 
 async function run() {
   try {
-    const moduleName = core.getInput('moduleName');
+    const moduleName = core.getInput('module_name');
     const token = core.getInput('token');
     const provider = core.getInput('provider');
-    const registryName = core.getInput('registryName');
-    const organization = core.getInput('organizations');
+    const registryName = core.getInput('registry_name');
+    const organization = core.getInput('organization');
     const body = {
       "data": {
         "type": "registry-modules",
