@@ -13,7 +13,7 @@ inputs:
   registry_name:   
     description: 'private | public registry'
     required: true 
-  organizations:
+  organization:
     description: 'organizations to create the module in'
     required: true 
 outputs:
