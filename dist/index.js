@@ -6498,18 +6498,6 @@ return new B(c,{type:"multipart/form-data; boundary="+b})}
 /******/ 	__nccwpck_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__nccwpck_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__nccwpck_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -8721,20 +8709,17 @@ function fixResponseChunkedTransferBadEnding(request, errorCallback) {
 	});
 }
 
-// EXTERNAL MODULE: ./node_modules/@actions/core/lib/core.js
-var core = __nccwpck_require__(24);
-var core_default = /*#__PURE__*/__nccwpck_require__.n(core);
 ;// CONCATENATED MODULE: ./lib/index.js
 
-
+const core = __nccwpck_require__ (24);
 
 async function run() {
   try {
-    const moduleName = core_default().getInput('moduleName');
-    const token = core_default().getInput('token');
-    const provider = core_default().getInput('provider');
-    const registryName = core_default().getInput('registryName');
-    const organization = core_default().getInput('organizations');
+    const moduleName = core.getInput('moduleName');
+    const token = core.getInput('token');
+    const provider = core.getInput('provider');
+    const registryName = core.getInput('registryName');
+    const organization = core.getInput('organizations');
     const body = {
       "data": {
         "type": "registry-modules",
@@ -8754,10 +8739,10 @@ async function run() {
       });
   
     const data = await response.json();
-    core_default().setOutput("res", data);
+    core.setOutput("res", data);
   }
   catch (error) {
-    core_default().setFailed(error.message);
+    core.setFailed(error.message);
   }
 }
 
