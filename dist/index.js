@@ -8732,6 +8732,9 @@ async function run() {
         }
       }
     }
+
+    core.setOutput("body", body);
+    core.setOutput("url", `https://app.terraform.io/api/v2/organizations/${organization}/registry-modules`);
     const response = await fetch(
       `https://app.terraform.io/api/v2/organizations/${organization}/registry-modules`, 
       {
