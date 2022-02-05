@@ -8,7 +8,7 @@ inputs:
     description: 'the name of the terraform module the user wishes to create'
     required: true 
   provider:  
-    description: 'the podule used provider'
+    description: 'the module provider'
     required: true 
   registry_name:   
     description: 'private | public registry'
