@@ -5,15 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - name: output 1
+      - name: tets create module
         id: hello
         uses: hayaah/create-terrafrom-module-action@v1.0.0
         with:
-          moduleName: 'moduleName'
-          token: 'token'
-          provider: 'provider'
-          registryName: 'registryName'
-          organizations: 'organizations'
+          moduleName: 'module-Name'
+          token:  ${{ secrets.TERRAFORM_TOKEN }}
+          provider: 'aws'
+          registryName: 'private'
+          organizations: 'wix-infragod'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.res }}"
