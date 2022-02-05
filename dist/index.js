@@ -5975,7 +5975,7 @@ async function run() {
 
     //const res = await response.json();
 
-    if (res.errors) {
+    if (response.errors) {
       core.setFailed(response.errors);
     }
     core.setOutput("response", response.data);
