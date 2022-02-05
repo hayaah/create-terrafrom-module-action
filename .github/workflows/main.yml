@@ -16,4 +16,4 @@ jobs:
           organization: 'wix-infragod'
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.res }}"
+        run: echo "The time was ${{ steps.hello.outputs.response }}"
