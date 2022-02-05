@@ -9,10 +9,10 @@ jobs:
         id: hello
         uses: hayaah/create-terrafrom-module-action@v1.0.2
         with:
-          moduleName: 'module-Name'
+          module_name: 'module-Name'
           token:  ${{ secrets.TERRAFORM_TOKEN }}
           provider: 'aws'
-          registryName: 'private'
+          registry_name: 'private'
           organizations: 'wix-infragod'
       # Use the output from the `hello` step
       - name: Get the output time
