@@ -8709,9 +8709,11 @@ function fixResponseChunkedTransferBadEnding(request, errorCallback) {
 	});
 }
 
+// EXTERNAL MODULE: ./node_modules/@actions/core/lib/core.js
+var core = __nccwpck_require__(24);
 ;// CONCATENATED MODULE: ./lib/index.js
 
-const core = __nccwpck_require__ (24);
+
 
 async function run() {
   try {
