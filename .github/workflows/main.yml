@@ -9,7 +9,7 @@ jobs:
         id: hello
         uses: hayaah/create-terrafrom-module-action@v1.1.1
         with:
-          module_name: 'module-Name-99'
+          module_name: 'module-Name-100'
           token:  ${{ secrets.TERRAFORM_TOKEN }}
           provider: 'aws'
           registry_name: 'private'
