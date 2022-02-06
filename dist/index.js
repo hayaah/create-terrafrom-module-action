@@ -5973,15 +5973,11 @@ async function run() {
       headers: headers
     })
 
-    //const res = await response.json();
-
-    // if (response.errors) {
-    //   core.setFailed(response.errors);
-    // }
-    core.setOutput("response", response);
+  
+    core.setOutput("response", JSON.stringify(response.data));
   }
   catch (error) {
-    core.setFailed(error.message);
+    core.setFailed({ status: error.response.status, data: error.response.data });
   }
 }
 
